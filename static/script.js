@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io('https://your-backend-server-url.com');
 let roomId = '';
 let boardSize = 30;
 let cells = [];
