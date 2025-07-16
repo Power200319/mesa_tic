@@ -1,0 +1,166 @@
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Container for lobby and game */
+#lobby, #game-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  max-width: 600px;
+  width: 90%;
+  margin-top: 30px;
+}
+
+/* Headings */
+h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* Buttons */
+button {
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* Input for room ID */
+#room-id-input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  width: 120px;
+  margin-right: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Status and room info text */
+#status, #room-info {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+/* Board container */
+#board {
+  margin: 20px auto 0;
+  max-width: 100%;
+  overflow-x: auto;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px #ffcc00;
+  display: grid;
+  justify-content: center;
+}
+
+/* Cells */
+.cell {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #333;
+  color: #ffcc00;
+  user-select: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.cell:hover {
+  background-color: #444;
+  box-shadow: 0 0 8px #ffcc00;
+}
+
+.cell.clicked-cell {
+  box-shadow: inset 0 0 10px 3px #4caf50;
+  background-color: #2e7d32;
+  color: #c8facc;
+}
+
+.cell.last-move {
+  box-shadow: 0 0 12px 4px #ff5722;
+  background-color: #ff7043;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #lobby, #game-container {
+    padding: 15px 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  #room-id-input {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  #board {
+    padding: 5px;
+    box-shadow: none;
+  }
+
+  .cell {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cell {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
